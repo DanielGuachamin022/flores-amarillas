@@ -29,6 +29,7 @@
       font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
+      margin: 5px;
     }
 
     button:hover {
@@ -59,39 +60,34 @@
   <h1>Para ti 💛 mi amor</h1>
 
   <p>Hoy quiero regalarte flores amarillas 🌼 aunque sea digitales 😘</p>
-
-  <!-- Puedes cambiar esta imagen -->
+ <!-- Puedes cambiar esta imagen -->
   <img src="assets/ImagenPaginaAmor.jpeg" alt="Flores amarillas">
 
   <br>
 
+  <!-- BOTONES -->
   <button onclick="agregarFlor()">Regalar flor 🌼</button>
-  <button onclick="agregarGirasol()">Regalar girsaol 🌻</button>
+  <button onclick="agregarGirasol()">Regalar girasol 🌻</button>
 
   <div id="flores-container"></div>
-  <div id="girasol-container"></div>
 
   <script>
     function agregarFlor() {
+      agregarElemento("🌼");
+    }
+
+    function agregarGirasol() {
+      agregarElemento("🌻");
+    }
+
+    function agregarElemento(tipo) {
       const contenedor = document.getElementById("flores-container");
 
       const flor = document.createElement("div");
       flor.classList.add("flor");
-      flor.textContent = "🌼";
+      flor.textContent = tipo;
 
       contenedor.appendChild(flor);
-    }
-  </script>
-
-  <script>
-    function agregarGirasol() {
-      const contenedor = document.getElementById("girasol-container");
-
-      const girasol = document.createElement("div");
-      girasol.classList.add("girasol");
-      girasol.textContent = "🌼";
-
-      contenedor.appendChild(girasol);
     }
   </script>
 
